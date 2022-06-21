@@ -4,6 +4,7 @@ import { RouteTwo } from "./Routetwo";
 export const HomeRoute = () => {
   const [name, setName] = useState("");
   const [data, setData] = useState([]);
+  const info = "sam";
 
   const fetchdata = (name) => {
     axios
@@ -13,7 +14,10 @@ export const HomeRoute = () => {
   //   console.log(data);
   return (
     <div style={{ width: "300px", margin: "auto" }}>
-      <RouteTwo userinfo={data} name={name} />
+      <RouteTwo
+        path="/routetwo"
+        element={<RouteTwo render={(params) => ({ ...params })} info={data} />}
+      />
       <h1>Enter Names</h1>
       <input
         type="text"

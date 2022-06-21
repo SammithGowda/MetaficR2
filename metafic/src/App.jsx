@@ -1,3 +1,4 @@
+import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { HomeRoute } from "./Components/Home";
@@ -7,7 +8,11 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<HomeRoute />} />
-        <Route path="/routetwo" element={<RouteTwo />} />
+        {/* <Route path="/routetwo" children={<RouteTwo user={user} />} /> */}
+        <Route
+          path="/routetwo"
+          element={<RouteTwo render={(params) => ({ ...params })} />}
+        />
       </Routes>
     </div>
   );
