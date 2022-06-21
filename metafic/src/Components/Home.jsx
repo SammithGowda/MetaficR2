@@ -12,7 +12,7 @@ export const HomeRoute = () => {
   };
   //   console.log(data);
   return (
-    <div>
+    <div style={{ width: "300px", margin: "auto" }}>
       <RouteTwo userinfo={data} name={name} />
       <h1>Enter Names</h1>
       <input
