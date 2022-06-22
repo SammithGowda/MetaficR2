@@ -9,10 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         {/* <Route path="/routetwo" children={<RouteTwo user={user} />} /> */}
-        <Route
-          path="/routetwo"
-          element={<RouteTwo render={(params) => ({ ...params })} />}
-        />
+        <Route path="/routetwo/:type" element={<RouteTwo />} />
       </Routes>
     </div>
   );

@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
 
 export const RouteTwo = ({ element }) => {
+  // const { type } = useParams();
+  const { state } = useLocation().state;
+  console.log(state.name);
+
   //   const [data, setData] = useState({});
-  const data = element.props.info;
 
   //   console.log(element.props.info, "other commponents");
   //   useEffect(() => {
   //     setData(element.props.info);
   //   }, []);
-  console.log(data);
-  return <div>Routetwo</div>;
+
+  return (
+    <div>
+      <p>{state.name}</p>
+    </div>
+  );
 };
