@@ -6,16 +6,12 @@ export const RouteTwo = ({ element }) => {
   const { state } = useLocation().state;
   console.log(state.name);
 
-  //   const [data, setData] = useState({});
-
-  //   console.log(element.props.info, "other commponents");
-  //   useEffect(() => {
-  //     setData(element.props.info);
-  //   }, []);
-
   return (
     <div>
-      <p>{state.name}</p>
+      <h1>UserInfo</h1>
+      <p>{`Name: ${state.name}`}</p>
+      <p>{`Height: ${state.height}`}</p>
+      <p>{`Base Experience: ${state.base_experience}`}</p>
     </div>
   );
 };
